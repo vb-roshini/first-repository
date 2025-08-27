@@ -20,17 +20,19 @@ grep -r "error" logs/
 tail app.log
 # 7. Change permissions of "script.sh" to make it executable for everyone
 # Your command here
-sudo chmod + x script.sh
+chmod a+x script.sh
 # 8. Use a command to search for the word "TODO" in every ".py" file in the current directory
 # Your command here
-grep "TODO"*.py
+grep -n "TODO" *.py
 # 9. Show the last 20 commands entered in the terminal
 # Your command here
-history|tail-n 20
+history| tail -n 20
 # 10. Show processes sorted by memory usage
 # Your command here
+ps aux --sort=-%mem
 # 11. Find all directories named "backup" anywhere on the system
 # Your command here
-
+find / -type d -name "backup"
 # 12. Replace every occurrence of "foo" with "bar" in "example.txt" and save to "new_example.txt"
 # Your command here
+sed 's/foo/bar/g' example.txt > new_example.txt
